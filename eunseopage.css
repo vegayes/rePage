@@ -1,6 +1,5 @@
 @-webkit-keyframes focus-in-contract{0%{letter-spacing:1em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes focus-in-contract{0%{letter-spacing:1em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
 
-@-webkit-keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}@keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}
 
 @font-face {
     font-family: 'GmarketSansMedium';
@@ -21,15 +20,31 @@
     color : white;
 }
 
+a, button{
+    cursor: pointer;
+}
+
 h2{
     font-size: 30px;
 }
 
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ==================================================================== */
 nav{
+    flex-basis: 100%;
+    height: 50px;
     display: flex;
     border: 3px solid white;
     
+    position: sticky;
+    top: 0;
+
+    z-index: 2;
 }
 
 nav >div:nth-child(1){
@@ -38,28 +53,173 @@ nav >div:nth-child(1){
     font-size: 28px;
 }
 
-nav >div:not(:nth-child(1)){
+nav >div:nth-child(2){
     flex-basis: 40%;
     padding-left: 30px;
 }
 
+nav >div:nth-child(3){
+    flex-basis: 35%;
+    padding-left: 30px;
+}
+
+
 nav > ul{
-    flex-basis: 15%;
+    flex-basis: 20%;
     display: flex;
 }
 
 nav > ul > li {
-    flex-basis: 40%;
-    font-size: 30px;   
+    flex-basis: 30%;
+    font-size: 30px;  
+    padding-left: 30px; 
+}
+
+
+/* ==================================================================== */
+
+aside {
+
+    border-color: 2px solid white;
+    flex-basis: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 550px;
+
+    position:sticky;
+    top:50px; 
+
+}
+
+
+aside:nth-child(1){
+    position: fixed;
+}
+
+
+aside li{
+    margin: 10px;
+}
+
+.right-side {
+    display: flex;
+    justify-content: end;
+
+}
+
+
+/* =================================================== */
+.content{
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
 }
 
 
 
+.first-content{
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
 
 
+.content-header{
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+
+    padding-top: 80px;
+}
+
+.content-header p:nth-child(1){
+    color: #749FF3;
+    margin-right: 30px;
+}
+
+.content-header p:nth-child(2){
+    color: #5CEB9A;
+    margin-right: 30px;
+}
+
+.content-header p:nth-child(3){
+    color: #FBBC05;
+}
+
+.focus-in-contract{-webkit-animation:focus-in-contract .7s cubic-bezier(.25,.46,.45,.94) both;animation:focus-in-contract .7s cubic-bezier(.25,.46,.45,.94) both}
 
 
+#search{
+    flex-basis: 10%;
+    display: flex;
+    justify-content: center;
+}
 
 
+#search fieldset{
+    border-radius: 5px;
+    margin : 0; 
+    padding : 2px;
+
+    width: 500px;
+    display: flex;
+}
+
+#search-input {
+    padding : 10px;
+    font-size : 18px;
+    font-weight: bold;
+
+    border : none; /* 기존의 값을 사라지게하고 fieldset이 border인 듯이 진행*/
+    outline : none; /* input 태그에 포커스가 맞춰졌을 때 이를 표현하기 위한 바깥선  */
+    /* 둘다 none도 가능하고 0도 가능함.*/
+
+    flex-basis: 92%;
+}
+
+#search-btn {
+    flex-basis : 8%;
+    cursor : pointer;
+    font-size : 1.2em; /*아이콘은 폰트사이즈로 변경해야 함.*/
+    color : #C8BCBC;
+    background-color: transparent;
+    border: none;
+}
+
+.content-list{
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.content-list label{
+    font-size: 12px;
+    text-align: center;
+}
+
+.content-list div{
+    margin: 0px 30px 10px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    cursor: pointer;
+}
 
 
+.content-list img{
+    height: 100%;
+}
+
+/* ================================================== */
