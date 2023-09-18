@@ -20,6 +20,14 @@
     color : white;
 }
 
+
+
+p, i {
+    font-size: 25px;
+    background-color: transparent; 
+    color: black;
+}
+
 a, button{
     cursor: pointer;
 }
@@ -88,7 +96,7 @@ aside {
     justify-content: center;
     align-items: center;
 
-    height: 550px;
+    height: 800px;
 
     position:sticky;
     top:50px; 
@@ -96,9 +104,9 @@ aside {
 }
 
 
-aside:nth-child(1){
+/* aside:nth-child(1){
     position: fixed;
-}
+} */
 
 
 aside li{
@@ -121,21 +129,24 @@ aside li{
 }
 
 
-
-.first-content{
-    height: 570px;
+/* 페이지 내용 설정 */
+.first-content, 
+.third-page{
+    height: 878px;
     display: flex;
     flex-direction: column;
     background-color: transparent;
+
+    border: 2px solid snow;
 }
 
-
+/* 첫 번째 페이지 */
 .content-header{
     flex-basis: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 70px;
 
     padding-top: 80px;
 }
@@ -158,7 +169,7 @@ aside li{
 
 
 #search{
-    flex-basis: 10%;
+    flex-basis: 8%;
     display: flex;
     justify-content: center;
 }
@@ -169,7 +180,7 @@ aside li{
     margin : 0; 
     padding : 2px;
 
-    width: 500px;
+    width: 700px;
     display: flex;
 }
 
@@ -195,7 +206,7 @@ aside li{
 }
 
 .content-list{
-    flex-basis: 45%;
+    flex-basis: 47%;
     display: flex;
     justify-content: center;
     padding-top: 40px;
@@ -209,8 +220,8 @@ aside li{
 .content-list div{
     margin: 0px 30px 10px;
 
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
 
@@ -223,3 +234,214 @@ aside li{
 }
 
 /* ================================================== */
+/* 두 번째 페이지 */
+.second-content{
+    height: 878px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid snow;
+}
+
+.profile{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-wrapper {
+    width : 400px;
+    height : 400px;
+    border-radius: 50%;
+    
+
+    overflow : hidden;
+
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-wrapper > img {
+    height: 100%;
+}
+
+
+.profile-content {
+    flex-basis: 60%;
+    width: 150px;
+    height: 400px;
+    margin-right: 20px;
+    padding : 40px;
+
+    font-size: 40px;
+
+    background-color: #F8FFAB;
+    border-radius: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-content > h2{
+    flex-basis: 100%;
+    height: 50px;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.profile-content > section {
+    flex-basis: 50%;
+    display: flex;
+    padding : 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+
+/* ================================================== */
+/* 세 번째 페이지 */
+.third-page .skills-title,
+.fifth-page .portfolio-title{
+    width: 550px;
+    height: 110px;
+    
+    margin:20px;
+
+    background-color: #F8FFAB;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-page-section{
+    display: flex;
+    padding : 10px;
+} 
+
+.third-page-section > section{
+    width: 450px;
+    height: 600px;
+    border-radius: 50px;
+    margin : 15px
+}
+
+.Language-content li:first-child,
+.Front-content li:first-child,
+.DB-content li:first-child {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid black;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+.third-page-section > section > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Language-content li:not(:first-child),
+.Front-content li:not(:first-child),
+.DB-content li:not(:first-child){
+    /* background-color: #ff5d  5d; */
+    margin : 10px;
+    width: 180px;
+    height: 180px;  
+}
+
+.third-page-section p{
+    text-align: center;
+}
+
+.third-page-section img{
+    height: 100%;
+}
+
+.Front-content p{
+    padding-right: 30px;
+}
+
+.Front-content li:not(:first-child){
+    margin : 10px
+}
+
+.Language-content{
+    background-color: #af98ff;
+}
+.Language-content:hover,
+.Front-content:hover,
+.DB-content:hover{
+    transform : scale(1.05); 
+    transition-duration: 1s;
+}
+
+.Front-content{
+    background-color: #B9C4FF;
+}
+
+.DB-content{
+    background-color: #EFEFEF;
+}
+
+
+.social-Repository-title{
+
+    background-color: #EC9D9D ;
+    margin: 30px;
+    padding-top : 20px;
+    width: 550px;
+    height: 100px;
+
+}
+
+
+/* ===================== */
+.fifth-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top : 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
