@@ -30,11 +30,13 @@ p, i {
 
 a, button{
     cursor: pointer;
+
+    background-color: transparent;
 }
 
-h2{
+/* h2{
     font-size: 30px;
-}
+} */
 
 
 main{
@@ -47,7 +49,7 @@ nav{
     flex-basis: 100%;
     height: 50px;
     display: flex;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     
     position: sticky;
     top: 0;
@@ -131,13 +133,27 @@ aside li{
 
 /* 페이지 내용 설정 */
 .first-content, 
-.third-page{
+.third-page,
+.fifth-page,
+.sixth-page{
     height: 878px;
     display: flex;
     flex-direction: column;
     background-color: transparent;
+    align-items: center;
+    /* border: 2px solid snow; */
+}
 
-    border: 2px solid snow;
+.fourth-page{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+    /* border: 2px solid snow; */
+}
+
+.fifth-page{
+    padding-top : 70px;
 }
 
 /* 첫 번째 페이지 */
@@ -235,13 +251,13 @@ aside li{
 
 /* ================================================== */
 /* 두 번째 페이지 */
-.second-content{
+.second-page{
     height: 878px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border: 2px solid snow;
+    /* border: 2px solid snow; */
 }
 
 .profile{
@@ -291,6 +307,7 @@ aside li{
     color: black;
     font-weight: bold;
     font-size: 40px;
+    text-align: center;
 }
 
 .profile-content > section {
@@ -305,7 +322,7 @@ aside li{
 
 /* ================================================== */
 /* 세 번째 페이지 */
-.third-page .skills-title,
+/* .third-page .skills-title,
 .fifth-page .portfolio-title{
     width: 550px;
     height: 110px;
@@ -318,7 +335,26 @@ aside li{
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+
+.skills-title,
+.portfolio-title{
+    width: 550px;
+    height: 110px;
+    
+    margin:20px;
+
+    color: black;
+    font-size: 35px;
+    background-color: #F8FFAB;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
+
 
 .third-page-section{
     display: flex;
@@ -329,9 +365,21 @@ aside li{
     width: 450px;
     height: 600px;
     border-radius: 50px;
-    margin : 15px
+    margin : 15px;
+
 }
 
+
+.third-page-section > section > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color:transparent;
+}
+
+/* 타이틀  */
 .Language-content li:first-child,
 .Front-content li:first-child,
 .DB-content li:first-child {
@@ -340,13 +388,12 @@ aside li{
     border-bottom: 3px solid black;
     padding: 20px 0px;
     margin-bottom: 20px;
+    background-color: transparent;
+    font-size: 50px;
+
+    color: palevioletred;
 }
-.third-page-section > section > ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .Language-content li:not(:first-child),
 .Front-content li:not(:first-child),
@@ -361,28 +408,37 @@ aside li{
     text-align: center;
 }
 
-.third-page-section img{
-    height: 100%;
+.third-page-section li{
+    background-color: transparent;
 }
 
+.third-page-section img{
+    height: 100%;
+    background-color: transparent;
+    padding-left: 5px;
+}
+
+/* 조정 */
 .Front-content p{
     padding-right: 30px;
 }
 
-.Front-content li:not(:first-child){
-    margin : 10px
+.Front-content li:nth-child(4){
+    margin-top:30px;
+}
+
+
+
+.Language-content:hover,
+.Front-content:hover,
+.DB-content:hover{
+    transform : scale(1.02); 
+    transition-duration: 1s;
 }
 
 .Language-content{
     background-color: #af98ff;
 }
-.Language-content:hover,
-.Front-content:hover,
-.DB-content:hover{
-    transform : scale(1.05); 
-    transition-duration: 1s;
-}
-
 .Front-content{
     background-color: #B9C4FF;
 }
@@ -392,37 +448,165 @@ aside li{
 }
 
 
-.social-Repository-title{
 
+/* 네 번째 페이지   */
+.social-Repository-title,
+.conact-title{
     background-color: #EC9D9D ;
     margin: 30px;
-    padding-top : 20px;
     width: 550px;
     height: 100px;
 
+    font-size: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-Repository-content{
+    display: flex;
+    
+}
+
+.social-Repository-content section {
+    width: 500px;
+    height: 200px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 30px;
 }
 
 
-/* ===================== */
-.fifth-page{
+.social-Repository-content > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-Repository-content i{
+    flex-basis: 30%;
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+    color:#1a1138;
+}
+
+.social-Repository-content div{
+    flex-basis: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding-top : 70px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
+/* ===================== */
+/* 다섯번째 페이지 */
+
+.portfolio-content{
+    flex-direction: 50%;
+    width: 900px;
+    height: 500px;
+    border-radius: 50px;
+    background: rgb(233,233,148);
+    background: radial-gradient(circle, rgba(233,233,148,1) 1%, rgba(238,174,202,1) 100%);
+
+    display: flex;
+}
+
+.portfolio-content div:nth-child(1){
+    flex-basis: 65%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
+}
+
+.portfolio-content img {
+    width: 500px;
+    border-radius: 0px 30px 0px 30px;
+}
+
+.portfolio-info{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+
+}
 
 
+.portfolio-info p{
+    font-size: 20px;
+    color: white;
+    margin: 20px 0px;
+    text-align: center;
+}
 
+.portfolio-info p:first-child{
+    font-size: 25px;
+}
 
+/* ================================================ */
+/* 여섯번째 페이지 */
 
+#conact{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
 
+}
 
+#conact input:not(:nth-child(3)){
+    height: 50px;
+    margin-bottom: 30px;
+    padding-left : 30px;
+    border-radius: 50px;
+}
+
+#conact input:nth-child(3){
+    height: 500px;
+    margin-bottom: 30px;
+    padding-left : 30px;
+    border-radius: 50px;
+}
+
+#conact button{
+    height: 50px;
+    border-radius: 50px;
+    background-color: #af98ff;
+
+    margin-bottom: 20px;
+}
+
+footer{
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+footer p {
+    
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    margin: 5px 0px;
+}
 
 
 

@@ -44,15 +44,17 @@
                 <!-- 메뉴바에 hover하면 값 변하게 하기  -->
                 <ul>
                     <li><a href="#">●</a></li>
-                    <li><a href="#">●</a></li>
-                    <li><a href="#">●</a></li>
-                    <li><a href="#">●</a></li>
-                    <li><a href="#">●</a></li>
+                    <li><a href="#second-page">●</a></li>
+                    <li><a href="#third-page">●</a></li>
+                    <li><a href="#fourth-page">●</a></li>
+                    <li><a href="#fifth-page">●</a></li>
+                    <li><a href="#sixth-page">●</a></li>
+                </ul>
                 </ul>
             </aside>
 
             <section class = "content">
-                <section class = "first-content">
+                <section class = "first-content" id = "first-page">
                     <div class = "content-header focus-in-contract">
                         <!--Welcom to YES Profile-->
                         <p>Y </p> 
@@ -70,15 +72,15 @@
 
                     <div class = "content-list">
                         <label>
-                            <div class = "content-list-first-wrapper" >
+                            <div class = "content-list-first-wrapper" href="#second-page"  >
                                 <!-- 이동 -->
-                                <img src="homepage-image/eunseo.jpg" >
+                                <img src="homepage-image/eunseo.jpg" href="#second-page">
                             </div>
                             ABOUT ME
                         </label>
 
                         <label>
-                            <div class = "content-list-second-wrapper">
+                            <div class = "content-list-second-wrapper" href="#third-page">
                                 <!-- 이동 -->
                                 <img src="homepage-image/coding.png">
                             </div>
@@ -86,7 +88,7 @@
                         </label>
 
                         <label>
-                            <div class = "content-list-third-wrapper">
+                            <div class = "content-list-third-wrapper" href="#fourth-page">
                                 <!-- 이동 -->
                                 <img src="homepage-image/webpage-img.jpg">
                             </div>
@@ -94,7 +96,7 @@
                         </label>
 
                         <label>
-                            <div class = "content-list-fourth-wrapper">
+                            <div class = "content-list-fourth-wrapper" href="#sixth-page">
                                 <!-- 이동 -->
                                 <img src="homepage-image/phone.png">
                             </div>
@@ -105,7 +107,7 @@
 
 
                 <!-- 두 번째 페이지 -->
-                <section class = "second-content">
+                <section class = "second-page" id = "second-page">
                     <section class = "profile">
                         <sectiton class = "profile-wrapper">
                             <img src="homepage-image/eunseo.jpg">
@@ -130,16 +132,15 @@
 
                 <!-- 세 번째 페이지 -->
                 <section class = "third-page" id = "third-page">
+
                     <section class = "skills-title" >
-                        <h2>SKILLS</h2>
+                        SKILLS
                     </section>
 
-
                     <section class = "third-page-section">
-
                         <section class = "Language-content">
                             <ul>
-                                <li><h2>Language</h2></li>
+                                <li>Language</li>
                                 <li><img src="homepage-image/python.png"></li>
                                 <li><img src="homepage-image/java.svg"></li>
                                 <li><img src="homepage-image/c.png"><p>C</p></li>
@@ -149,7 +150,7 @@
 
                         <section class = "Front-content">
                             <ul>
-                                <li><h2>Front-Content</h2></li>
+                                <li>Front-Content</li>
                                 <li><img src="homepage-image/css3-alt.svg"><p>css</p></li>
                                 <li><img src="homepage-image/html5.svg"><p>html</p></li>
                                 <li><img src="homepage-image/js.svg"><p>Js</p></li>
@@ -158,7 +159,7 @@
 
                         <section class = "DB-content">
                             <ul>
-                                <li><h2>DB</h2></li>
+                                <li>DB</li>
                                 <li><img src="homepage-image/oracle.svg"><p>oracle</p></li>
                                 <li><img src="homepage-image/jdbc.png"><p>jdbc</p></li>
                             </ul>
@@ -169,37 +170,83 @@
                 </section>
 
 
+                <!-- 네 번째 페이지 -->
+                <section class = "fourth-page" id = "fourth-page">
 
-                <div style="height: 600px;"></div>
+                    <section class = "social-Repository-title">
+                        Social Repository
+                    </section>
 
-                <div style="height: 600px;"></div>
+                    <section class = "social-Repository-content">
+                        <section class = "git-hub-content">
+                            <i class="fa-brands fa-github"></i>
+                            <div class = "git-hub-info">
+                                소스코드 저장소
+                                <a href= "https://github.com/vegayes" target="_blank">https://github.com/vegayes</a>
+                            </div>
+                        </section>
 
+                        <section class = "velog-content">
+                            <i class="fa-solid fa-pen"></i>
+                            <div class = "git-hub-info">
+                                기술블로그
+                                <a href="https://velog.io/@vegayes" target = " _blank">https://velog.io/@vegayes</a>
+                            </div>
+                        </section>
 
+                    </section>
 
+                </section>
 
+                <!-- 다섯 번재 페이지  -->
+                <section id = "fifth-page" class = "fifth-page">
+                    <section class = "portfolio-title" >
+                        Portfolio
+                    </section>
 
+                    <section class = "portfolio-content">
+                        <div class ="portfolio-img">
+                            <a href = "http://192.168.50.216:5501/youtube-clone.html"><img src= "homepage-image/youtube-clone.png"></a>
+                        </div>
+                    
+                        <div class = "portfolio-info">
+                            <p>1) Youtube-clone-Coding</p>
+                            <p>과정 : HTML , CSS를 이용하여<br> 
+                                youtube 영상, 추천 재생목록,<br>
+                                영상 정보, 댓글창 등의 화면을 구성해봄.</p>
+                        </div>
+                    </section>
+                </section>
 
+                <!--여섯번 째 페이지-->
+                <section id = "sixth-page" class = "sixth-page">
+                    <section class ="conact-title">
+                        Conact
+                    </section>
 
-
-
-
+                    <form action = "#" id = "conact">
+                        <input type="text" placeholder="Name" name ="Name" >
+                        <input type="text" placeholder="Title" name = "Title"> 
+                        <input type="text" placeholder="Message" name = "Message">
+                        <button id = "send-btn">Send</button>
+                    </form>
+                </section>
 
             </section>
 
-
-
-
-
-
-
-
-
             <aside class = "right-side">
-                <a class="fa-solid fa-angles-down" href="#"></a>
+                <a class="fa-solid fa-angles-down" href="#footer"></a>
             </aside>
         </main>
 
-       
+
+        <footer id = "#footer">
+            <p>
+                본 페이지는 상업적 목적이 아닌<br>
+            개인 포트폴리오용으로 제작되었습니다.
+            </p> 
+            <p>&copy;2023 You-Eun-Seo. All Rights Reserved.</p>
+        </footer>
         
     </body>
 </html>
