@@ -323,7 +323,6 @@ for(let i = 0; i < arr.length; i++){
                 arr[click].innerText ="●";
                 arr[click].style.fontSize = "16px";
                 arr[click].style.color ="white";
-
             }
 
             click = i;
