@@ -421,7 +421,7 @@ document.getElementById("search-input").addEventListener("keyup", function() {
     const span = document.getElementById("searchResult");
 
     // 한글 2~5글자 정규 표현식
-    const regExp =/^[a-zA-Z]*$/;
+    const regExp =/^[a-zA-Z]+$/;
 
 
     // 빈칸인지 검사 
