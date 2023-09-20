@@ -94,41 +94,8 @@
 // 키보드 형태
 
 
-// 1) YES blog 색깔 랜덤 지정 마우스 오버시,
-const text = document.getElementById("blog-name");
 
-document.getElementById("blog-name").addEventListener("mouseover", () => {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-
-    // console.log(r + g +  b );
-    // this.style.color = rgb(rColor, gColor, bColor);
-
-    text.style.color = `rgb(${r}, ${g}, ${b})`;
-    // this.style.color = `rgb(${r}, ${g}, ${b})`;
-
-
-    // this.style.color = "rgb(" + r + "," + g + "," + b + ")"
-});
-
-//  1-2) 함수로 바꿔서 진행하기 
-function generateRandomColor(element) {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-
-    element.style.color = `rgb(${r}, ${g}, ${b})`;
-}
-
-document.getElementById("git-move").addEventListener("mouseover", function(){
-    generateRandomColor(this);
-});
-
-var originalColor ="white"; // 원래 색상을 저장할 변수
-document.getElementById("git-move").addEventListener("mouseout", function(){
-    this.style.color = originalColor; // 원래 색상으로 복원
-});
+// ============ 연습
 
 
 // 2) aside-bar 마우스 오버시, 고정된 값 변화하기
@@ -150,6 +117,187 @@ document.getElementById("git-move").addEventListener("mouseout", function(){
 //         arr[i].style.color = 'white';
 //     });
 // }
+
+
+
+// 4)??
+
+// const navbarMenu = document.querySelector('.navbar__menu');
+// navbarMenu.addEventListener('click', (event) => {
+
+//   const target = event.target;
+//   const link = target.dataset.link;
+
+//   console.log(event.target.dataset.link);
+  
+//   if (link == null) {
+//     return;
+//   } else {
+//     const scroll = document.querySelector(link);
+//     scroll.scrollIntoView({behavior:"smooth"}); //option으로 애니메이션을 smooth하게 만든다
+//   }
+// });
+
+// 5) 스크롤 예쁘게 내리기
+// for(let i = 0; i < arr.length; i++){
+//     arr[i].addEventListener("click", function(){
+
+//         const link = arr[i].href;
+
+//         if(link == null){
+//             return;
+//         }else{
+//             const scroll = document.querySelector(link);
+//             scroll.scrollIntoView({behavior:"smooth"});
+//         }
+
+//     });
+// }
+
+
+// document.getElementById("footer-move").addEventListener("click", function(){
+//     console.log("smooth");
+//     document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+// })
+
+
+
+
+
+// document.getElementById("footer-move").addEventListener("click", function(){
+//     console.log("smooth");
+//     window.scrollTo({left:0, top:0})
+// })
+
+
+
+// document.getElementById("seventh-page").addEventListener("doubleclick",function(){
+//     const addText = document.getElementById("addText");
+//     var displayValue = window.getComputedStyle(addText).getPropertyValue("display");
+//     console.log("addText의 display 값:", displayValue);
+    
+//     if(displayValue =="none"){
+//         addText.style.display ="block";
+//     }else{
+//         addText.style.display ="none";
+//     }
+
+// })
+
+
+// 7) 시계
+// let interval; // setInterval을 저장하기 위한 전역 변수
+// let flag = 0 ; 
+
+// // 현재 시간 문자열로 반환 함수 
+// function  currentTime(){
+
+//     const now = new Date();
+//     // Date() 날짜관련 JS 내장 객체
+
+//     let hour = now.getHours(); // 시
+//     let min = now.getMinutes(); // 분
+//     let sec = now.getSeconds(); // 초
+
+//     if(hour < 10) hour = "0" + hour;
+//     if(min < 10) min = "0" + min;
+//     if(sec < 10) sec = "0" + sec;
+
+//     return hour + " : " + min + " : " + sec;
+// }
+
+// function clockFn(){
+//     const clock = document.getElementById("clock");
+
+//     clock.innerText = currentTime();
+
+  
+//     interval = setInterval(function(){
+//         clock.innerText = currentTime();
+//     }, 1000);
+    
+// }
+
+// clockFn(); //함수호출
+
+
+
+
+
+
+
+
+
+// arr[0].addEventListener("mouseover", function(){
+//     console.log(arr[0]);
+
+//     setTimeout( function(){
+//         arr[0].style.color = 'red';
+//     }, 100);
+
+// })
+
+// // mouseout
+// arr[0].addEventListener("mouseout", function(){
+//     console.log(arr[0]);
+
+//     setTimeout( function(){
+//         arr[0].style.color = 'white';
+//     }, 100);
+
+// })
+
+// document.getElementsByClassName("left-bar").addEventListener("click ", function(){
+
+//     const arr = document.getElementsByClassName("left-bar");
+
+//     console.log(arr);
+
+//     // for(let i = 0; i < arr.length; i++){
+
+//     //     const num = arr[i].innerText;
+//     //     arr[i].style.backgroundColor = "rgb(130, 220, " + (50 * num) + ")";
+//     // }
+// });
+
+
+// ===============================================================================================
+
+
+// 1) YES blog 색깔 랜덤 지정 마우스 오버시,
+const text = document.getElementById("blog-name");
+
+document.getElementById("blog-name").addEventListener("mouseover", () => {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    // console.log(r + g +  b );
+    // this.style.color = rgb(rColor, gColor, bColor);
+
+    text.style.color = `rgb(${r}, ${g}, ${b})`;
+    // this.style.color = `rgb(${r}, ${g}, ${b})`;
+    // this.style.color = "rgb(" + r + "," + g + "," + b + ")"
+});
+
+//  1-2) 함수로 바꿔서 진행하기 
+function generateRandomColor(element) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    element.style.color = `rgb(${r}, ${g}, ${b})`;
+}
+
+document.getElementById("git-move").addEventListener("mouseover", function(){
+    generateRandomColor(this);
+});
+
+var originalColor ="white"; // 원래 색상을 저장할 변수
+document.getElementById("git-move").addEventListener("mouseout", function(){
+    this.style.color = originalColor; // 원래 색상으로 복원
+});
+
 
 
 // ------------------------
@@ -215,47 +363,6 @@ document.getElementById("send-btn").addEventListener("click", function(){
 });
 
 
-
-// const navbarMenu = document.querySelector('.navbar__menu');
-// navbarMenu.addEventListener('click', (event) => {
-
-//   const target = event.target;
-//   const link = target.dataset.link;
-
-//   console.log(event.target.dataset.link);
-  
-//   if (link == null) {
-//     return;
-//   } else {
-//     const scroll = document.querySelector(link);
-//     scroll.scrollIntoView({behavior:"smooth"}); //option으로 애니메이션을 smooth하게 만든다
-//   }
-// });
-
-// 5) 스크롤 예쁘게 내리기
-// for(let i = 0; i < arr.length; i++){
-//     arr[i].addEventListener("click", function(){
-
-//         const link = arr[i].href;
-
-//         if(link == null){
-//             return;
-//         }else{
-//             const scroll = document.querySelector(link);
-//             scroll.scrollIntoView({behavior:"smooth"});
-//         }
-
-//     });
-// }
-
-
-// document.getElementById("footer-move").addEventListener("click", function(){
-//     console.log("smooth");
-//     document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-// })
-
-
-
 //  5) 스크롤 예쁘게 내리기
 const footer = document.getElementById("footer").offsetTop;
 
@@ -267,10 +374,8 @@ document.getElementById("footer-move").addEventListener("click", function(){
 })
 
 
-
 const section = document.querySelectorAll(".content>section");
 // const arr = document.getElementsByClassName("left-bar");
-
 const first = section[0].offsetTop;
 const second = section[1].offsetTop;
 const third = section[2].offsetTop;
@@ -294,13 +399,6 @@ for(let i = 0 ; i < arr.length; i++){
 
 
 
-
-
-// document.getElementById("footer-move").addEventListener("click", function(){
-//     console.log("smooth");
-//     window.scrollTo({left:0, top:0})
-// })
-
 // 6) 접고 펼치기
 document.getElementById("seventh-page").addEventListener("click",function(){
     const addText = document.getElementById("addText");
@@ -317,54 +415,6 @@ document.getElementById("seventh-page").addEventListener("click",function(){
 
 // 7) 글자 바꾸기
 
-// document.getElementById("seventh-page").addEventListener("doubleclick",function(){
-//     const addText = document.getElementById("addText");
-//     var displayValue = window.getComputedStyle(addText).getPropertyValue("display");
-//     console.log("addText의 display 값:", displayValue);
-    
-//     if(displayValue =="none"){
-//         addText.style.display ="block";
-//     }else{
-//         addText.style.display ="none";
-//     }
-
-// })
-
-
-// 7) 시계
-// let interval; // setInterval을 저장하기 위한 전역 변수
-// let flag = 0 ; 
-
-// // 현재 시간 문자열로 반환 함수 
-// function  currentTime(){
-
-//     const now = new Date();
-//     // Date() 날짜관련 JS 내장 객체
-
-//     let hour = now.getHours(); // 시
-//     let min = now.getMinutes(); // 분
-//     let sec = now.getSeconds(); // 초
-
-//     if(hour < 10) hour = "0" + hour;
-//     if(min < 10) min = "0" + min;
-//     if(sec < 10) sec = "0" + sec;
-
-//     return hour + " : " + min + " : " + sec;
-// }
-
-// function clockFn(){
-//     const clock = document.getElementById("clock");
-
-//     clock.innerText = currentTime();
-
-  
-//     interval = setInterval(function(){
-//         clock.innerText = currentTime();
-//     }, 1000);
-    
-// }
-
-// clockFn(); //함수호출
 
 
 //8) 정규표현식
@@ -394,44 +444,4 @@ document.getElementById("search-input").addEventListener("keyup", function() {
     }
 });
 
-
-
-
-
-
-
-
-
-
-// arr[0].addEventListener("mouseover", function(){
-//     console.log(arr[0]);
-
-//     setTimeout( function(){
-//         arr[0].style.color = 'red';
-//     }, 100);
-
-// })
-
-// // mouseout
-// arr[0].addEventListener("mouseout", function(){
-//     console.log(arr[0]);
-
-//     setTimeout( function(){
-//         arr[0].style.color = 'white';
-//     }, 100);
-
-// })
-
-// document.getElementsByClassName("left-bar").addEventListener("click ", function(){
-
-//     const arr = document.getElementsByClassName("left-bar");
-
-//     console.log(arr);
-
-//     // for(let i = 0; i < arr.length; i++){
-
-//     //     const num = arr[i].innerText;
-//     //     arr[i].style.backgroundColor = "rgb(130, 220, " + (50 * num) + ")";
-//     // }
-// });
 
