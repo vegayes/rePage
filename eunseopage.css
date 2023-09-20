@@ -631,7 +631,7 @@ footer p {
 
 /* ------------- 추가------------- */
 
-#seventh-page{
+#seventh-page, #eighth-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -646,6 +646,9 @@ footer p {
     scroll-behavior: smooth;
 } */
 
+.add{
+    width: 100px;
+}
 
 
 
