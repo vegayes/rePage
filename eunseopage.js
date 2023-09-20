@@ -28,12 +28,37 @@
 // innerText : Element 속성
 
 
+// ① 문자열.indexOf("str");
+// ② 문자열.substring(시작인덱스, 종료인덱스) :문자열 일부 잘라내기
+// ③ 문자열.split("구분자") : 문자열을 "구분자"로 잘라서 배열로 반환
+// ① Infinity 리터럴 확인
+// ② NaN 리터럴 확인
+// ③ isNaN(값) : 값이 NaN이면 true, 아니면 false반환
+// ④ Math.random() : 0이상 1미만의 난수 발생 ( 0 <= random < 1)
+// ⑤ 소수점 관련 함수
+// round(), ceil(), floor(), trunc()
+// ⑥ 숫자.toFixed(자릿수) : 지정된 자릿수까지 반올림해서 표현
+
+// parseInt() : 정수로 변환함 ("3.14" -> 3)
+// parseFloat() : "정수" -> 정수 / "실수 "-> 실수 
+
+// 1) #test의 자식 노드를 모두 얻어오기
+// - 요소.childNodes : 요소의 자식 노드를 모두 반환
 
 
+/*1. 정규 표현식 객체 생성 방법
+1) const regExp = new RegExp("정규표현식");
+2) const regExp = /정규표현식/;
+    -> 양쪽 '/' 기호 정규 표현식의 리터럴 표기법 
 
+2. 문자열 패턴 확인 메서드(함수)
+1) regExp.test(문자열)
+  -> 문자열에 정규표현식과 일치하는 패턴이 있을 경우 true, 없으면 false
+2) regExp.exec(문자열)
+  -> 문자열에 정규표현식과 일치하는 패턴이 있을 경우 처음 매칭되는 문자열을 반환
+     없으면 null 반환   
 
-
-
+*/
 
 
 
@@ -72,7 +97,7 @@
 // 1) YES blog 색깔 랜덤 지정 마우스 오버시,
 const text = document.getElementById("blog-name");
 
-document.getElementById("blog-name").addEventListener("mouseover", function(){
+document.getElementById("blog-name").addEventListener("mouseover", () => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
@@ -87,6 +112,23 @@ document.getElementById("blog-name").addEventListener("mouseover", function(){
     // this.style.color = "rgb(" + r + "," + g + "," + b + ")"
 });
 
+//  1-2) 함수로 바꿔서 진행하기 
+function generateRandomColor(element) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    element.style.color = `rgb(${r}, ${g}, ${b})`;
+}
+
+document.getElementById("git-move").addEventListener("mouseover", function(){
+    generateRandomColor(this);
+});
+
+var originalColor ="white"; // 원래 색상을 저장할 변수
+document.getElementById("git-move").addEventListener("mouseout", function(){
+    this.style.color = originalColor; // 원래 색상으로 복원
+});
 
 
 // 2) aside-bar 마우스 오버시, 고정된 값 변화하기
@@ -111,8 +153,9 @@ document.getElementById("blog-name").addEventListener("mouseover", function(){
 
 
 // ------------------------
+// 2) 요소 색깔 및 변화하게하기
 const arr = document.getElementsByClassName("left-bar");
-var click  = 0;
+var click  = null;
 for(let i = 0; i < arr.length; i++){
     arr[i].addEventListener("click", function(){
         // arr[i].style.color = "rgb(130, 220, " + (50 * i+10) + ")";
@@ -123,100 +166,240 @@ for(let i = 0; i < arr.length; i++){
 
             console.log(arr[i]);
             arr[i].innerText = "★";
+            arr[i].style.fontSize = "20px";
             arr[i].style.color = `rgb(180, ${60* i + 20}, ${20* i + 5})`;
 
-            console.log(arr[click]);
-            arr[click].innerText ="●";
-            arr[click].style.color ="white";
 
-            // arr[click].innerText = "●";
-            // arr[click].style.color = 'white';
+            if(click != null){
+                console.log(arr[click]);
+                arr[click].innerText ="●";
+                arr[click].style.fontSize = "16px";
+                arr[click].style.color ="white";
 
-
+            }
 
             click = i;
             console.log("지금 선택된 값 " + click);
-
-
         }
-
-
     });
 }
 
-// 3) 배경 색 바꾸기 
-// document.getElementById("search").addEventListener("change", function(){
-
-//     console.log("change 이벤트 발생");
-
-//     const body = document.getElementById("body");
-//     const search = document.getElementById("search");
-
-//     const bgColor = search.value;
-//     console.log(bgColor);
-
-//     // body.style.backgroundColor = bgColor;
-// });
-
-// 검색 창에 검색 시, inner value로 변경????????????????????????????????????
-const div1 = document.querySelectorALL("nav>div, nav li");
-console.log(div1);
-// for (const i = 0; i < sections.length; i++) {
-//   const item = sections.item(i);
-//   item.style.border = "1px solid #ff0000";
-// }
-
-
-// for(let i = 0 ; i <div1.length; i++){
-//     console.log("div"+[i] +" : "+ div1[i]);
-
-//     div1.style.backgroundColor = "red";
-// }
-// div1.style.backgroundColor="red";
+// 3) 네비 색 바꾸기 
 
 document.getElementById("search-input").addEventListener("change", function(){
 
-    console.log("change 이벤트 발생");
+    const select = document.querySelectorAll("nav *");
+    const val = document.getElementById("search-input");
 
-    const div1 = document.querySelectorALL("nav *");
+    const backColor = val.value;
 
-    console.log(div1);
-    const input1 = document.getElementById("search-input");
 
-    const bgColor = input1.value;
+    for(let i = 0 ; i < select.length; i++){
+        select[i].style.backgroundColor = backColor;
+    }
 
-    console.log(bgColor);
+});
 
-    div1.style.backgroundColor = bgColor;
+
+// 4) 제출 버튼 누르면 타이틀 나와서 알림창에 뜨게하기.
+
+document.getElementById("send-btn").addEventListener("click", function(){
+    const sendMsg = document.getElementById("Title").value;
+
+    console.log(sendMsg);
+    if(sendMsg.length > 0){
+        alert(sendMsg + "이 제출되었습니다.");
+    }else{
+        alert("제출에 오류가 발생하였습니다.")
+    }
+});
+
+
+
+// const navbarMenu = document.querySelector('.navbar__menu');
+// navbarMenu.addEventListener('click', (event) => {
+
+//   const target = event.target;
+//   const link = target.dataset.link;
+
+//   console.log(event.target.dataset.link);
+  
+//   if (link == null) {
+//     return;
+//   } else {
+//     const scroll = document.querySelector(link);
+//     scroll.scrollIntoView({behavior:"smooth"}); //option으로 애니메이션을 smooth하게 만든다
+//   }
+// });
+
+// 5) 스크롤 예쁘게 내리기
+// for(let i = 0; i < arr.length; i++){
+//     arr[i].addEventListener("click", function(){
+
+//         const link = arr[i].href;
+
+//         if(link == null){
+//             return;
+//         }else{
+//             const scroll = document.querySelector(link);
+//             scroll.scrollIntoView({behavior:"smooth"});
+//         }
+
+//     });
+// }
+
+
+// document.getElementById("footer-move").addEventListener("click", function(){
+//     console.log("smooth");
+//     document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+// })
+
+
+
+//  5) 스크롤 예쁘게 내리기
+const footer = document.getElementById("footer").offsetTop;
+
+document.getElementById("footer-move").addEventListener("click", function(){
+    window.scroll({
+        top:footer, 
+        behavior: "smooth"
+    });
+})
+
+
+
+const section = document.querySelectorAll(".content>section");
+// const arr = document.getElementsByClassName("left-bar");
+
+const first = section[0].offsetTop;
+const second = section[1].offsetTop;
+const third = section[2].offsetTop;
+const fourth = section[3].offsetTop;
+const fifth = section[4].offsetTop;
+const sixth = section[5].offsetTop;
+const seventh = section[6].offsetTop;
+
+console.log(second);
+for(let i = 0 ; i < arr.length; i++){
+    console.log(arr[i]);
+    arr[i].addEventListener("click", function(){
+        console.log(section[i].offsetTop);
+        whindow.scroll({
+            top : section[i].offsetTop,
+            behavior :"smooth"
+        });
+    });
+};
+
+
+
+
+
+
+// document.getElementById("footer-move").addEventListener("click", function(){
+//     console.log("smooth");
+//     window.scrollTo({left:0, top:0})
+// })
+
+// 6) 접고 펼치기
+document.getElementById("seventh-page").addEventListener("click",function(){
+    const addText = document.getElementById("addText");
+    var displayValue = window.getComputedStyle(addText).getPropertyValue("display");
+    console.log("addText의 display 값:", displayValue);
+    
+    if(displayValue =="none"){
+        addText.style.display ="block";
+    }else{
+        addText.style.display ="none";
+    }
+
+})
+
+// 7) 글자 바꾸기
+
+// document.getElementById("seventh-page").addEventListener("doubleclick",function(){
+//     const addText = document.getElementById("addText");
+//     var displayValue = window.getComputedStyle(addText).getPropertyValue("display");
+//     console.log("addText의 display 값:", displayValue);
+    
+//     if(displayValue =="none"){
+//         addText.style.display ="block";
+//     }else{
+//         addText.style.display ="none";
+//     }
+
+// })
+
+
+// 7) 시계
+// let interval; // setInterval을 저장하기 위한 전역 변수
+// let flag = 0 ; 
+
+// // 현재 시간 문자열로 반환 함수 
+// function  currentTime(){
+
+//     const now = new Date();
+//     // Date() 날짜관련 JS 내장 객체
+
+//     let hour = now.getHours(); // 시
+//     let min = now.getMinutes(); // 분
+//     let sec = now.getSeconds(); // 초
+
+//     if(hour < 10) hour = "0" + hour;
+//     if(min < 10) min = "0" + min;
+//     if(sec < 10) sec = "0" + sec;
+
+//     return hour + " : " + min + " : " + sec;
+// }
+
+// function clockFn(){
+//     const clock = document.getElementById("clock");
+
+//     clock.innerText = currentTime();
+
+  
+//     interval = setInterval(function(){
+//         clock.innerText = currentTime();
+//     }, 1000);
+    
+// }
+
+// clockFn(); //함수호출
+
+
+//8) 정규표현식
+document.getElementById("search-input").addEventListener("keyup", function() {
+
+    // 결과 출력용 span 
+    const span = document.getElementById("searchResult");
+
+    // 한글 2~5글자 정규 표현식
+    const regExp =/^[a-zA-Z]*$/;
+
+
+    // 빈칸인지 검사 
+    if(this.value.length == 0){
+        // 지운경우 span Tag 안의 값을 지워줌.
+        span.innerText = "";
+        return;
+    }
+
+    // 유효성 검사
+    if( !regExp.test(this.value)){
+        console.log("안된다.");
+        // 유효한 경우 
+        span.innerText = "형식이 유효하지 않습니다.";
+        span.style.color = "red";
+        span.style.fontWeight = "bold";
+    }
 });
 
 
 
 
 
-// for (let i = 0; i < arr.length; i++) {
-//     function mouseLeaveFunc(a,i) {
-//         a.innerText = "★";
-//         arr[i].style.color = `rgb(210, ${60* i + 20}, ${20* i + 5})`;
-//     }
-    
-//     function MouseOut(a,i) {
-//         a.innerText = "●";
-//         arr[i].style.color = "white";
-//     }
 
 
-
-//     arr[i].addEventListener("mouseover", handleMouse(arr[i],i));
-//     arr[i].addEventListener("mouseout", handleMouseLeave(arr[i],i));
-//   }
-
-
-// for(let i = 0; i < arr.length; i++){
-//     arr[i].addEventListener("click", function(){
-//         arr[i].style.color = `rgb(210, ${60* i + 20}, ${20* i + 5})`;
-//     });
-// }
 
 
 
@@ -251,27 +434,4 @@ document.getElementById("search-input").addEventListener("change", function(){
 //     //     arr[i].style.backgroundColor = "rgb(130, 220, " + (50 * num) + ")";
 //     // }
 // });
-
-
-
-
-
-
-
-//  입력창에 포커스가 생기면
-// document.getElementById("search-input").addEventListener("focus",function(){
-
-//     console.log("focus됨");
-
-//     // 색깔 지정하기
-
-
-// })
-
-
-
-
-
-
-
 

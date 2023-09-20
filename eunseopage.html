@@ -33,7 +33,7 @@
                 <div></div>
 
                 <ul>
-                    <li><a class="fa-brands fa-github" href ="https://github.com/vegayes" target="_blank"></a></li>
+                    <li><a class="fa-brands fa-github" href ="https://github.com/vegayes" target="_blank" id = "git-move"></a></li>
                     <li><a class="fa-solid fa-envelope-open" href="mailto:vegayes@naver.com" target="_blank"></a></li>
                     <li><a class="fa-solid fa-house-user" href = "https://velog.io/@vegayes" target="_blank"></a></li>
                 </ul>
@@ -42,14 +42,13 @@
 
             <aside class = "left-side">
                 <!-- 메뉴바에 hover하면 값 변하게 하기  -->
-                <ul>
+                <ul class = "left-container">
                     <li><a href="#" class = "left-bar">●</a></li>
                     <li><a href="#second-page" class = "left-bar">●</a></li>
                     <li><a href="#third-page" class = "left-bar">●</a></li>
                     <li><a href="#fourth-page" class = "left-bar">●</a></li>
                     <li><a href="#fifth-page" class = "left-bar">●</a></li>
                     <li><a href="#sixth-page" class = "left-bar">●</a></li>
-                </ul>
                 </ul>
             </aside>
 
@@ -63,14 +62,14 @@
                     </div>
 
                     <!-- 검색 창  -->
-                    <form action = "/keyword" id ="search" method="get" >
+                    <form action = "#" id ="search" method="get" >
                         <fieldset>
                             <!-- 나중에 키워드 입력 시, 관련된 프로젝트 보여주기 -->
-                            <input type="search" id = "search-input" placeholder="키워드를 입력해주세요"  autocomplete='off'>
+                            <input type="search" id = "search-input" placeholder="바꿀 상단바 색깔을 입력해주세요"  autocomplete='off'>
                             <button class="fa-solid fa-magnifying-glass" id = "search-btn"></button>
                         </fieldset>
                     </form>
-
+                    <span id = "searchResult"></span>
                     <div class = "content-list">
                         <label>
                             <a href="#second-page"> 
@@ -118,7 +117,7 @@
 
                 <!-- 두 번째 페이지 -->
                 <section class = "second-page" id = "second-page">
-                    <section class = "profile">
+                    <section class = "profile" >
                         <sectiton class = "profile-wrapper">
                             <img src="homepage-image/eunseo.jpg">
                         </sectiton>
@@ -216,7 +215,8 @@
 
                     <section class = "portfolio-content">
                         <div class ="portfolio-img">
-                            <a href = "http://192.168.50.216:5501/youtube-clone.html"><img src= "homepage-image/youtube-clone.png"></a>
+                            <!-- <a href = "http://192.168.50.216:5501/youtube-clone.html"><img src= "homepage-image/youtube-clone.png"></a> -->
+                            <a href = "http://192.168.219.108:5501/02_CSS/youtube-clone.html"><img src= "homepage-image/youtube-clone.png"></a>
                         </div>
                     
                         <div class = "portfolio-info">
@@ -236,16 +236,23 @@
 
                     <form action = "#" id = "conact">
                         <input type="text" placeholder="Name" name ="Name" >
-                        <input type="text" placeholder="Title" name = "Title"> 
+                        <input type="text" placeholder="Title" name = "Title" id = "Title"> 
                         <input type="text" placeholder="Message" name = "Message">
                         <button id = "send-btn">Send</button>
                     </form>
                 </section>
 
+                <section id = "seventh-page" class = "seventh-page">
+                    <a id = "content">마지막</a> <br><br>
+                    <div id = "addText">
+                        저의 포트폴리오를 확인해주셔서 감사합니다.
+                    </div>
+                </section>
+
             </section>
 
-            <aside class = "right-side">
-                <a class="fa-solid fa-angles-down" href= "#footer"></a>
+            <aside class = "right-side" id = "footer-move">
+                <a class="fa-solid fa-angles-down" ></a>
             </aside>
         </main>
 
