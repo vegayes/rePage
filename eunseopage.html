@@ -27,7 +27,7 @@
                 </div>
 
                 <div>
-                    <h2><a href="#">YES’s Portfolio</a></h2>
+                    <h2><a href="#" id = "blog-name">YES’s Portfolio</a></h2>
                 </div>
 
                 <div></div>
@@ -43,12 +43,12 @@
             <aside class = "left-side">
                 <!-- 메뉴바에 hover하면 값 변하게 하기  -->
                 <ul>
-                    <li><a href="#">●</a></li>
-                    <li><a href="#second-page">●</a></li>
-                    <li><a href="#third-page">●</a></li>
-                    <li><a href="#fourth-page">●</a></li>
-                    <li><a href="#fifth-page">●</a></li>
-                    <li><a href="#sixth-page">●</a></li>
+                    <li><a href="#" class = "left-bar">●</a></li>
+                    <li><a href="#second-page" class = "left-bar">●</a></li>
+                    <li><a href="#third-page" class = "left-bar">●</a></li>
+                    <li><a href="#fourth-page" class = "left-bar">●</a></li>
+                    <li><a href="#fifth-page" class = "left-bar">●</a></li>
+                    <li><a href="#sixth-page" class = "left-bar">●</a></li>
                 </ul>
                 </ul>
             </aside>
@@ -63,44 +63,54 @@
                     </div>
 
                     <!-- 검색 창  -->
-                    <form action = "#" id ="search" method="get" >
+                    <form action = "/keyword" id ="search" method="get" >
                         <fieldset>
-                            <input type="search" id = "search-input"placeholder="은서에 대하여 검색하세요">
+                            <!-- 나중에 키워드 입력 시, 관련된 프로젝트 보여주기 -->
+                            <input type="search" id = "search-input" placeholder="키워드를 입력해주세요"  autocomplete='off'>
                             <button class="fa-solid fa-magnifying-glass" id = "search-btn"></button>
                         </fieldset>
                     </form>
 
                     <div class = "content-list">
                         <label>
-                            <div class = "content-list-first-wrapper" href="#second-page"  >
-                                <!-- 이동 -->
-                                <img src="homepage-image/eunseo.jpg" href="#second-page">
-                            </div>
-                            ABOUT ME
+                            <a href="#second-page"> 
+                                <div class = "content-list-first-wrapper" >
+                                    <!-- 이동 -->
+                                    <img src="homepage-image/eunseo.jpg">
+                                </div>
+                                ABOUT ME
+                            </a>
                         </label>
 
                         <label>
-                            <div class = "content-list-second-wrapper" href="#third-page">
-                                <!-- 이동 -->
-                                <img src="homepage-image/coding.png">
-                            </div>
-                            SKILLS
+                            <a href="#third-page">
+                                <div class = "content-list-second-wrapper" >
+                                    <!-- 이동 -->
+                                    <img src="homepage-image/coding.png">
+                                </div>
+                                SKILLS
+                            </a>
                         </label>
 
                         <label>
-                            <div class = "content-list-third-wrapper" href="#fourth-page">
-                                <!-- 이동 -->
-                                <img src="homepage-image/webpage-img.jpg">
-                            </div>
-                            PORTFOLIO
+                            <a href="#fourth-page">
+                                <div class = "content-list-third-wrapper" >
+                                    <!-- 이동 -->
+                                    <img src="homepage-image/webpage-img.jpg">
+                                </div>
+                                PORTFOLIO
+                            </a>
                         </label>
 
                         <label>
-                            <div class = "content-list-fourth-wrapper" href="#sixth-page">
-                                <!-- 이동 -->
-                                <img src="homepage-image/phone.png">
-                            </div>
-                            CONACT
+                            <a href="#sixth-page">
+                                <div class = "content-list-fourth-wrapper" >
+                                    <!-- 이동 -->
+                                    <img src="homepage-image/phone.png">
+                                </div>
+                                CONACT
+                            </a>
+
                         </label>
                     </div>
                 </section>
@@ -235,18 +245,18 @@
             </section>
 
             <aside class = "right-side">
-                <a class="fa-solid fa-angles-down" href="#footer"></a>
+                <a class="fa-solid fa-angles-down" href= "#footer"></a>
             </aside>
         </main>
 
 
-        <footer id = "#footer">
+        <footer id ="footer">
             <p>
                 본 페이지는 상업적 목적이 아닌<br>
             개인 포트폴리오용으로 제작되었습니다.
             </p> 
             <p>&copy;2023 You-Eun-Seo. All Rights Reserved.</p>
         </footer>
-        
+        <script src="eunseopage.js"></script>
     </body>
 </html>

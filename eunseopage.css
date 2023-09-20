@@ -34,6 +34,11 @@ a, button{
     background-color: transparent;
 }
 
+a:hover, li:hover{
+    transform : scale(1.15); 
+    transition-duration: 1s;
+}
+
 /* h2{
     font-size: 30px;
 } */
@@ -53,7 +58,6 @@ nav{
     
     position: sticky;
     top: 0;
-
     z-index: 2;
 }
 
@@ -83,6 +87,10 @@ nav > ul > li {
     flex-basis: 30%;
     font-size: 30px;  
     padding-left: 30px; 
+}
+
+nav *{
+    background-color: black;
 }
 
 
@@ -162,22 +170,25 @@ aside li{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+   
 
     padding-top: 80px;
 }
 
 .content-header p:nth-child(1){
+    font-size: 50px;
     color: #749FF3;
     margin-right: 30px;
 }
 
 .content-header p:nth-child(2){
+    font-size: 50px;
     color: #5CEB9A;
     margin-right: 30px;
 }
 
 .content-header p:nth-child(3){
+    font-size: 50px;
     color: #FBBC05;
 }
 
